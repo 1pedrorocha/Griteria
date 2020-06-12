@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    background-image: url(assets/background.png);
+    background-size: 160px;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: #727176;
+}
+
+/* começa o menu */
+.menu-top-container {
+    position: fixed;
+    background-color: #d8225b;
+    height: 60px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 gray;
+}
+
+.menu-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1024px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+/* logo */
+.logo-menu-top {
+    height: 50px;
+    width: 240px;
+    display: flex;
+    margin-right: 10px;
+}
+
+.logo-icon img {
+    height: 50px;
+    /* não consegui fazer ela se adequar, tive que forçar o tamanho */
+    object-fit: cover;
+}
+
+.logo-text img{
+    height: 30px;
+    object-fit: cover;
+    margin-left: 20px;
+    margin-top: 10px;
+    /* esse alinhamento certamente está errado */
+}
+/* fim do logo */
+
+/* barra de pesquisa */
+.search-bar-container {
+    width: auto;
+    height: 40px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 36px;
+    background-color: #e4edf1;
+    border-radius: 18px;
+}
+
+.search-bar:hover {
+    background-color: #d7dfe2;
+}
+
+.search-field {
+    flex: 70;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    font-weight: 400;
+    color: #a5a5a5;
+}
+
+.search-field form{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    /* tentei centralizar o input que está dentro desse form assim, mas não funcionou */
+}
+
+.search-field input{
+    border: 0;
+    background: transparent;
+    width: 300px;
+    margin-top: 15px;
+    /* sei que essa margin top está errada, eu estou forçando uma centralização do jeito errado */
+    margin-left: 10px;
+}
+
+.search-field input:focus{
+    border: 0;
+    outline: none;
+    /* dúvida: como eu removo o texto na hora que eu clico? pq agora, o texto "buscar" só sai quando eu começo a digitar */
+}
+
+.search-icon-container {
+    flex: 10;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-bar img {
+    height: 20px;
+    margin-right: 15px;
+}
+
+.user-menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 310px;
+    height: 50px;
+}
+/* fim da barra de pesquisa */
+
+/* informações do usuário */
+.notification-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: #e4edf1;
+}
+
+.notification-container:hover {
+    background-color: #d7dfe2;
+}
+
+.notification-container img{
+    height: 20px;
+}
+
+.profile-info {
+    margin-left: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 180px;
+    height: 50px;
+    padding: 0 8px;
+    border-radius: 25px;
+}
+
+.profile-info:hover {
+    background-color: #b51f55;
+}
+
+.profile-picture-menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture-menu-container img {
+    height: 40px;
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 4px;
+    /* pq 4px de margem bottom? deveria ser 5! */
+}
+
+.name-menu-container {
+    width: 100px;
+    color: white;overflow-x: auto;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.down-arrow-menu {
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.down-arrow-menu img{
+    height: 8px;
+}
+/* fim das informações do usuário */
+/* termina o menu */
+
+/* começa o container */
+.container {
+    width: 1024px;
+    margin: auto;
+    display: flex;
+    height: 100%;
+    /* só registrando que eu estava tentando fazer o side menu ir até em baixo, e aí entendi que ele estava indo até em baixo dessa div, mas essa div não estava indo até em baixo ;D */
+}
+
+.body-container {
+    margin-top: 60px;
+    display: flex;
+}
+
+/* começa o side menu */
+.side-menu {
+    width: 260px;
+    margin-right: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.side-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin: 30px 0 30px 20px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.side-menu ul li:hover{
+    height: 40px;
+    padding-left: 0;
+    border-radius: 20px 0 0 20px;
+    background-color: #e4edf1;
+}
+
+.side-menu-img-container {
+    margin-right: 20px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.side-menu-img-container img{
+    height: 20px;
+}
+
+.side-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-menu-button button {
+    background-color: #d8225b;
+    outline: none;
+    border: none;
+    width: 170px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+}
+
+.side-menu-button button:hover {
+background-color: #b51f55;
+}
+
+.user-side-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.user-side-menu img {
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.main-name-side-menu {
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.id-side-menu {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: grey;
+}
+
+.side-menu-seta {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.side-menu-seta img {
+    height: 15px;
+    margin-bottom: 10px;
+}
+
+/* início timeline */
+.timeline {
+    width: auto;
+}
+
+.post-box {
+    background-color: white;
+    padding: 30px;
+    margin: 0 0 10px 0;
+}
+
+.post-box2 {
+    background-color: white;
+    padding: 30px;
+    margin: 0;
+}
+
+
+.align-post-box {
+    display: flex;
+}
+
+.profile-picture-post-box img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.post-place {
+    margin-right: 0px;
+}
+
+.post-write {
+    margin-left: 0;
+}
+
+.post-write textarea {
+    resize: none;
+    border: 0;
+    width: 300px;
+    height: 80px;
+    outline: none;
+    color: gray;
+/* Não to conseguindo acertar o alinhamento dessa text área.
+Quero diminuir a distância entre o avatar e o texto
+
+Além disso, obviamente quero fazer os ajustes nesse campo de texto.*/
+}
+
+.post-button {
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.post-button button {
+    background-color: #d8225b;
+    outline: none;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+}
+
+.post-button button:hover {
+background-color: #b51f55;
+}
+
+.post-timeline {
+    background-color: white;
+}
+
+.post-user-info {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.post-user-name {
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+.post-info {
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 0 10px;
+    color: grey;
+}
+
+.post-content {
+    width: 300px;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: grey;
+}
+
+.post-timeline hr {
+    border-width: 0.5px;
+    border-color: #bfc0c4;
+    margin: 0px;
+    border-style: solid;
+}
+
+.likes {
+    margin-top: 10px;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.like-number {
+    margin-right: 10px;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: gray;
+}
+
+.likes img {
+    height: 15px;
+    margin-right: 2px;
+}
+
+/* início da sidebar */
+.sidebar {
+  width: 310px;  
+  margin-left: 10px;
+}
+
+.sidebar-news {
+    padding: 30px;
+    background-color: white;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+.news {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.news img {
+    height: 15px;
+    margin-right: 10px;
+}
+
+.news-news {
+    font-size: 0.9rem;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.news-info {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+/* Sidebar promotion */
+
+.sidebar-promotion {
+    padding: 30px;
+    background-color: white;
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.description {
+    margin-bottom: 30px;
+}
+
+.promotion-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-promotion img {
+    width: 230px;
+}
+
+.promotion-button {
+    display: flex;
+    justify-content: center;
+}
+
+.promotion-button button {
+    height: 39px;
+    width: 230px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #bfaa69;
+    margin-top: 30px;
+    background-color: white;
+    color: #bfaa69;
+}
+
+.promotion-button button:hover {
+    background-color: #bfaa69;
+    color: white;
+}
+
+/* Media Queries */
+
+@media 
